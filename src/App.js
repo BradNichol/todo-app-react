@@ -14,7 +14,7 @@ function App() {
         <main className="container">
           <QuoteBox />
           <DatePeriod title="TODAY" />
-          <Task />
+          <Task text="Complete proposal" />
           <DatePeriod title="TOMORROW" />
           <AddButton />
 
