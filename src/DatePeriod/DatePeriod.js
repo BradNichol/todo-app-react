@@ -1,12 +1,12 @@
 import React from 'react';
 import './DatePeriod.css';
 
-function DatePeriod() {
+function DatePeriod(props) {
     return (
 
         <div className="row mt-4">
             <div className="col">
-                <h1 className="PeriodTitles">TODAY</h1>
+                <h1 className="PeriodTitles">{props.title}</h1>
             </div>
         </div>
     );

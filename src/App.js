@@ -13,8 +13,9 @@ function App() {
       <Nav / >
         <main className="container">
           <QuoteBox />
-          <DatePeriod />
+          <DatePeriod title="TODAY" />
           <Task />
+          <DatePeriod title="TOMORROW" />
           <AddButton />
 
         </main>
