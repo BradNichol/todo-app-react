@@ -1,4 +1,5 @@
 import React from 'react';
+import './DatePeriod.css';
 
 function DatePeriod() {
     return (
