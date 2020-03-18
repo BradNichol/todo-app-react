@@ -2,3 +2,13 @@
     background-color: #224982;
     color: white;
   }
+
+  .addButton {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #122542;
+    color: white;
+    font-size: 30px;
+    position: fixed;
+    bottom: 10px;
+  }
