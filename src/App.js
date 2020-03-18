@@ -4,6 +4,7 @@ import './App.css';
 import Nav from './Nav/Nav'
 import QuoteBox from './QuoteBox/QuoteBox'
 import DatePeriod from './DatePeriod/DatePeriod'
+import Task from './Task/Task'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <main className="container">
           <QuoteBox />
           <DatePeriod />
+          <Task />
 
         </main>
     </div>
