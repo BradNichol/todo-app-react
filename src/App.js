@@ -5,6 +5,7 @@ import Nav from './Nav/Nav'
 import QuoteBox from './QuoteBox/QuoteBox'
 import DatePeriod from './DatePeriod/DatePeriod'
 import Task from './Task/Task'
+import AddButton from './Task/AddButton'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <QuoteBox />
           <DatePeriod />
           <Task />
+          <AddButton />
 
         </main>
     </div>
