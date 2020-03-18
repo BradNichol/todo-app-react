@@ -7,6 +7,10 @@ function App() {
   return (
     <div className="App">
       <Nav / >
+        <main className="container">
+
+          
+        </main>
     </div>
   );
 }
