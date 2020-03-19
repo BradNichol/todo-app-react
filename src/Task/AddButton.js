@@ -1,13 +1,18 @@
 import React from 'react';
-import './Task.css'
+import './Task.css';
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
+
+
 
 function AddButton() {
     return(
-        <div className="row mt-4">
-            <div className="col">
-                <button className="addButton" type="submit">+</button>
-            </div>
-        </div>
+        
+        <Fab position="left-top" size="large" color="primary" aria-label="add">
+            <AddIcon />
+        </Fab>
+        
+    
     );
 }
 
