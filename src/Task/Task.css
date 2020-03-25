@@ -5,11 +5,10 @@
   }
 
   .addButton {
-    width: 50%;
-    margin: 0 auto;
-    background-color: #122542;
-    color: white;
-    font-size: 30px;
+    margin: 0px;
+    top: auto;
+    right: 20px;
+    bottom: 20px;
+    left: auto;
     position: fixed;
-    bottom: 10px;
   }
