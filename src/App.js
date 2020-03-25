@@ -17,6 +17,20 @@ function App() {
       dueDate: "2020-03-04",
       completed: false,
       id: 1
+    },
+    {
+      task: "Quarantine",
+      type: "work",
+      dueDate: "2020-03-04",
+      completed: false,
+      id: 2
+    },
+    {
+      task: "Buy milk",
+      type: "personal",
+      dueDate: "2020-03-04",
+      completed: false,
+      id: 3
     }
   
   ]);
