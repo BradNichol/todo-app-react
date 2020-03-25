@@ -12,25 +12,25 @@ function App() {
 
   const [tasks, SetTasks] = useState([
     {
+      id: 1,
       task: "Organise a meeting",
       type: "work",
       dueDate: "2020-03-04",
-      completed: false,
-      id: 1
+      completed: false
     },
     {
+      id: 2,
       task: "Quarantine",
       type: "work",
       dueDate: "2020-03-04",
-      completed: false,
-      id: 2
+      completed: false
     },
-    {
+    { 
+      id: 3,
       task: "Buy milk",
       type: "personal",
       dueDate: "2020-03-04",
-      completed: false,
-      id: 3
+      completed: false
     }
   
   ]);
@@ -42,11 +42,14 @@ function App() {
           <QuoteBox />
           <DatePeriod title="TODAY" />
           {tasks.map(task => {
+            if(task.dueDate == "2020-03-04") {
             return (
               <Task
+                key={task.id}
                 text={task.task}
               />
             );
+          }
           })}
           <DatePeriod title="TOMORROW" />
           <Task text="Meeting at 9am" />
