@@ -7,7 +7,14 @@ function Task(props) {
             <div className="col">
                 <div className="card shadow-sm task">
                     <div className="card-body">
-                        {props.text}
+                        <div className="row">
+                            <div className="col-2">
+                                <input className="form-check-input" type="checkbox" value="" />
+                            </div>
+                            <div className="col-10">
+                                {props.text}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
