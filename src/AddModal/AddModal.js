@@ -38,10 +38,10 @@ const AddModal = () => {
 
     return (
         <div>
-            <Fab size="large" color="primary" aria-label="add" className={classes.fab}>
-            <   AddIcon />
+            <Fab size="large" color="primary" aria-label="add" className={classes.fab} onClick={handleOpen}>
+                <AddIcon />
             </Fab>
-            
+
             <Modal open={open} className={classes.modal} onClose={handleClose}>
                 <div className={classes.paper}>Test Modal</div>
             </Modal>
