@@ -9,6 +9,16 @@ function Nav() {
 
         <header className="container-fluid">
             <nav>
+                <AppBar position="fixed">
+                    <Toolbar>
+                        <IconButton edge="start" aria-label="menu">
+                            <MenuIcon />
+                        </IconButton>
+                        GET SH*T DONE
+                    </Toolbar>
+                </AppBar>
+                <Toolbar />
+                
 
 
                 
