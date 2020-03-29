@@ -41,6 +41,7 @@ function App() {
       if (task.id === id) {
         task.completed = true;
       }
+      return task;
     });
 
     SetTasks(newTaskArr);
@@ -57,7 +58,9 @@ function App() {
             return (
               <Task
                 key={task.id}
+                id={task.id}
                 text={task.task}
+                dueDate={task.dueDate}
                 markCompleteFunc={completeStrikethough}
               />
             );
