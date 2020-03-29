@@ -35,6 +35,17 @@ function App() {
   
   ]);
 
+  const completeStrikethough = (id) => {
+    
+    const newTaskArr = tasks.map(task => {
+      if (task.id === id) {
+        task.completed = true;
+      }
+    });
+
+    SetTasks(newTaskArr);
+  };
+
   return (
     <div className="App">
       <Nav / >
@@ -47,6 +58,7 @@ function App() {
               <Task
                 key={task.id}
                 text={task.task}
+                markCompleteFunc={completeStrikethough}
               />
             );
           }
