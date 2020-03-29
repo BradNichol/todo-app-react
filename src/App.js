@@ -55,7 +55,6 @@ function App() {
     <div className="App">
       <Nav / >
         <main className="container">
-          <AddModal />
           <QuoteBox />
           <DatePeriod title="TODAY" />
           {tasks.map(task => {
@@ -75,7 +74,8 @@ function App() {
           <DatePeriod title="TOMORROW" />
           <Task text="Meeting at 9am" />
           <Task text="send notes to team" />
-          
+          <AddModal />
+
 
         </main>
     </div>
