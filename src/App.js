@@ -6,6 +6,7 @@ import QuoteBox from './QuoteBox/QuoteBox'
 import DatePeriod from './DatePeriod/DatePeriod'
 import Task from './Task/Task'
 import AddButton from './Task/AddButton'
+import AddModal from './AddModal/AddModel'
 
 
 function App() {
