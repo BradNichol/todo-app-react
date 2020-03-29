@@ -6,7 +6,7 @@ import QuoteBox from './QuoteBox/QuoteBox'
 import DatePeriod from './DatePeriod/DatePeriod'
 import Task from './Task/Task'
 import AddButton from './Task/AddButton'
-import AddModal from './AddModal/AddModel'
+import AddModal from './AddModal/AddModal'
 
 
 function App() {
@@ -56,6 +56,7 @@ function App() {
     <div className="App">
       <Nav / >
         <main className="container">
+          <AddModal />
           <QuoteBox />
           <DatePeriod title="TODAY" />
           {tasks.map(task => {
