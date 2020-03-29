@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 
 const AddModal = () => {
+
+    const useStyles = makeStyles((theme) => ({
+        modal: {
+            display: 'flex',
+            padding: theme.spacing(2, 4, 3)
+        },
+    }));
 
     const [open, setOpen] = useState(false);
 
@@ -13,10 +21,12 @@ const AddModal = () => {
         setOpen(false);
     };
 
+    const classes = useStyles()
+
     return (
         <div>
             <button type="button" onClick={handleOpen}>Click</button>
-            <Modal open={open} onClose={handleClose}>Test Modal</Modal>
+            <Modal open={open} className={classes.modal} onClose={handleClose}><div>Test Modal</div></Modal>
         </div>
 
     );
