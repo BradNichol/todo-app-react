@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
 
 const AddModal = () => {
 
@@ -14,7 +16,12 @@ const AddModal = () => {
             backgroundColor: '#ffffff',
             padding: theme.spacing(2, 4, 3),
             width: '80%'
-        }
+        },
+        fab: {
+            position: 'fixed',
+            bottom: theme.spacing(2),
+            right: theme.spacing(2),
+          },
     }));
 
     const [open, setOpen] = useState(false);
@@ -31,7 +38,10 @@ const AddModal = () => {
 
     return (
         <div>
-            <button type="button" onClick={handleOpen}>Click</button>
+            <Fab size="large" color="primary" aria-label="add" className={classes.fab}>
+            <   AddIcon />
+            </Fab>
+            
             <Modal open={open} className={classes.modal} onClose={handleClose}>
                 <div className={classes.paper}>Test Modal</div>
             </Modal>
