@@ -39,7 +39,11 @@ function App() {
     
     const newTaskArr = tasks.map(task => {
       if (task.id === id) {
-        task.completed = true;
+        if (task.completed) {
+          task.completed = false;
+        } else {
+          task.completed = true;
+        }
       }
       return task;
     });
