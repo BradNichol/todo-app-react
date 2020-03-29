@@ -60,6 +60,7 @@ function App() {
                 key={task.id}
                 id={task.id}
                 text={task.task}
+                completed={task.completed}
                 dueDate={task.dueDate}
                 markCompleteFunc={completeStrikethough}
               />
