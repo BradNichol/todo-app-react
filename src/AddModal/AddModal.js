@@ -7,8 +7,14 @@ const AddModal = () => {
     const useStyles = makeStyles((theme) => ({
         modal: {
             display: 'flex',
-            padding: theme.spacing(2, 4, 3)
+            alignItems: 'center',
+            justifyContent: 'center',
         },
+        paper: {
+            backgroundColor: '#ffffff',
+            padding: theme.spacing(2, 4, 3),
+            width: '80%'
+        }
     }));
 
     const [open, setOpen] = useState(false);
@@ -26,7 +32,9 @@ const AddModal = () => {
     return (
         <div>
             <button type="button" onClick={handleOpen}>Click</button>
-            <Modal open={open} className={classes.modal} onClose={handleClose}><div>Test Modal</div></Modal>
+            <Modal open={open} className={classes.modal} onClose={handleClose}>
+                <div className={classes.paper}>Test Modal</div>
+            </Modal>
         </div>
 
     );
