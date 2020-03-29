@@ -17,7 +17,7 @@ function Task(props) {
                                 <input className="form-check-input" type="checkbox" value="" onClick={handleCompletedStrikethrough} />
                             </div>
                             <div className="col-10">
-                                {props.text}
+                                {props.completed === false ? props.text : <del>{props.text}</del>}
                             </div>
                         </div>
                     </div>
