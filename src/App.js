@@ -42,7 +42,7 @@ function App() {
           <QuoteBox />
           <DatePeriod title="TODAY" />
           {tasks.map(task => {
-            if(task.dueDate == "2020-03-04") {
+            if(task.dueDate === "2020-03-04") {
             return (
               <Task
                 key={task.id}
