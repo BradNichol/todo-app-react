@@ -46,10 +46,11 @@ function App() {
     SetTasks(newTaskArr);
   };
 
+  // function to count 'todays' count only, not all days
   const taskCountFunc = () => {
     let count = 0;
     tasks.forEach(task => {
-      if (!task.completed) {
+      if (!task.completed && task.dueDate === "2020-03-04") { // TODO: get todays date
         count++;
       }
     });
