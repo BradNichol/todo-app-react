@@ -54,7 +54,6 @@ function App() {
         count++;
       }
     })
-    console.log(count)
     return count;
   }
   
