@@ -21,11 +21,7 @@ function Task(props) {
                 />
               </div>
               <div className="col-10">
-                {props.completed === false ? (
-                  props.text
-                ) : (
-                  <del>{props.text}</del>
-                )}
+                {props.completed === false ? (props.text) : ( <del>{props.text}</del>)}
               </div>
             </div>
           </div>
