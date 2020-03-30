@@ -11,6 +11,10 @@ function Nav() {
   const useStyles = makeStyles({
     root: {
       backgroundColor: "#2b71c2"
+    },
+
+    taskNotification: {
+        marginLeft: 'auto'
     }
   });
 
@@ -24,7 +28,7 @@ function Nav() {
               <MenuIcon />
             </IconButton>
             GET SH*T DONE
-            <IconButton>
+            <IconButton className={classes.taskNotification}>
               <Badge badgeContent={4} color="secondary">
                 <NotificationsIcon />
               </Badge>
