@@ -46,17 +46,17 @@ function App() {
 
     SetTasks(newTaskArr);
   };
-  
+
   const taskCountFunc = () => {
     let count = 0;
     tasks.forEach(task => {
       if (!task.completed) {
         count++;
       }
-    })
+    });
     return count;
-  }
-  
+  };
+
   return (
     <div className="App">
       <Nav taskCount={taskCountFunc()} />
