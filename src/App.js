@@ -78,8 +78,20 @@ function App() {
           }
         })}
         <DatePeriod title="TOMORROW" />
-        <Task text="Meeting at 9am" />
-        <Task text="send notes to team" />
+        {tasks.map(task => {
+          if (task.dueDate === "2020-03-05") {
+            return (
+              <Task
+                key={task.id}
+                id={task.id}
+                text={task.task}
+                completed={task.completed}
+                dueDate={task.dueDate}
+                markCompleteFunc={completeStrikethough}
+              />
+            );
+          }
+        })}
         <AddModal />
       </main>
     </div>
