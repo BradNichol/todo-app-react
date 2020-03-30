@@ -46,8 +46,19 @@ function App() {
 
     SetTasks(newTaskArr);
   };
-
-  const [taskCount, setTaskCount] = useState(tasks.length);
+  
+  const taskCountFunc = () => {
+    let count = 0;
+    tasks.forEach(task => {
+      if (!task.completed) {
+        count++;
+      }
+    })
+    console.log(count)
+    return count;
+  }
+  
+  const [taskCount, setTaskCount] = useState(taskCountFunc());
 
   return (
     <div className="App">
