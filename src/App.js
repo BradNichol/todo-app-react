@@ -28,6 +28,13 @@ function App() {
       type: "personal",
       dueDate: "2020-03-04",
       completed: false
+    },
+    {
+      id: 4,
+      task: "go for a run",
+      type: "personal",
+      dueDate: "2020-03-05",
+      completed: false
     }
   ]);
 
