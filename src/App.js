@@ -47,9 +47,11 @@ function App() {
     SetTasks(newTaskArr);
   };
 
+  const [taskCount, setTaskCount] = useState(tasks.length);
+
   return (
     <div className="App">
-      <Nav taskCount={tasks.length} />
+      <Nav taskCount={taskCount} />
       <main className="container">
         <QuoteBox />
         <DatePeriod title="TODAY" />
