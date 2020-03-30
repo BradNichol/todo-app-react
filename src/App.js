@@ -49,7 +49,7 @@ function App() {
 
   return (
     <div className="App">
-      <Nav />
+      <Nav taskCount={tasks.length} />
       <main className="container">
         <QuoteBox />
         <DatePeriod title="TODAY" />

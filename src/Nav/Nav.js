@@ -7,7 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Badge from "@material-ui/core/Badge";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 
-function Nav() {
+function Nav(props) {
   const useStyles = makeStyles({
     root: {
       backgroundColor: "#2b71c2"
@@ -29,7 +29,7 @@ function Nav() {
             </IconButton>
             GET SH*T DONE
             <IconButton className={classes.taskNotification}>
-              <Badge badgeContent={4} color="secondary">
+              <Badge badgeContent={props.taskCount} color="secondary">
                 <NotificationsIcon />
               </Badge>
             </IconButton>
