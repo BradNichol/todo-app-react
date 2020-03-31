@@ -1,6 +1,6 @@
 {
   "short_name": "Get Sh*t Done",
-  "name": "Get Sh*t Done | To Do App",
+  "name": "Get Sh*t Done | A To Do App",
   "icons": [
     {
       "src": "favicon.ico",
@@ -21,5 +21,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#2b71c2"
 }
