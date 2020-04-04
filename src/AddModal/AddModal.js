@@ -73,7 +73,8 @@ const AddModal = () => {
             <TextField id="task" label="Task" />
             <InputLabel id="task-type">Task Type</InputLabel>
             <Select
-              LabelId="task-type"
+              labelId="task-type"
+              id="task-type-select"
               value={type}
               onChange={handleTypeChange}
             >
