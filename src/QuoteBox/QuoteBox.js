@@ -13,6 +13,7 @@ function QuoteBox() {
   .then((data) => {
     const obj = data.contents.quotes[0]
     document.getElementById('quote').innerText = `"${obj.quote}"`
+    document.getElementById('author').innerText = ` - ${obj.author}`
     
   });
 
@@ -23,6 +24,7 @@ function QuoteBox() {
       <div className="col mt-4">
         <div className="quoteBox">
           <p id ="quote"></p>
+          <p id="author"></p>
         </div>
       </div>
     </div>
