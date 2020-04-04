@@ -12,6 +12,8 @@ import {
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import InputLabel from "@material-ui/core/InputLabel";
+import Button from '@material-ui/core/Button';
+
 
 const AddModal = (props) => {
   const useStyles = makeStyles(theme => ({
@@ -88,6 +90,9 @@ const AddModal = (props) => {
                 onChange={handleDateChange}
               />
             </MuiPickersUtilsProvider>
+            <Button variant="contained" color="primary" onChange={handleAddTask}>
+              Add Task
+            </Button>
           </form>
         </div>
       </Modal>
