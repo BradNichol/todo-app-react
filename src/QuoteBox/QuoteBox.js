@@ -12,7 +12,7 @@ function QuoteBox() {
   })
   .then((data) => {
     const obj = data.contents.quotes[0]
-    document.getElementById('quote').innerText = obj.quote
+    document.getElementById('quote').innerText = `"${obj.quote}"`
     
   });
 
