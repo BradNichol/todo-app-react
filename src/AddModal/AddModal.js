@@ -90,7 +90,7 @@ const AddModal = (props) => {
                 onChange={handleDateChange}
               />
             </MuiPickersUtilsProvider>
-            <Button variant="contained" color="primary" onChange={handleAddTask}>
+            <Button variant="contained" color="primary" onClick={handleAddTask}>
               Add Task
             </Button>
           </form>
