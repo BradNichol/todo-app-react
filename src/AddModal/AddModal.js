@@ -9,6 +9,9 @@ import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker
 } from "@material-ui/pickers";
+import Select from "@material-ui/core/Select";
+import MenuItem from "@material-ui/core/MenuItem";
+import InputLabel from "@material-ui/core/InputLabel";
 
 const AddModal = () => {
   const useStyles = makeStyles(theme => ({
@@ -44,7 +47,12 @@ const AddModal = () => {
     setSelectedDate(date);
   };
 
-  const classes = useStyles();
+  const [type, setType] = useState();
+  const handleTypeChange = event => {
+    setType(event.target.value);
+  };
+
+  const classes = useStyles("");
 
   return (
     <div>
@@ -63,7 +71,16 @@ const AddModal = () => {
           <form>
             <h3>Add A Task</h3>
             <TextField id="task" label="Task" />
-            <TextField id="type" label="Type" />
+            <InputLabel id="task-type">Task Type</InputLabel>
+            <Select
+              LabelId="task-type"
+              value={type}
+              onChange={handleTypeChange}
+            >
+              <MenuItem value="Work">Work</MenuItem>
+              <MenuItem value="Personal">Personal</MenuItem>
+            </Select>
+
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
               <KeyboardDatePicker
                 value={selectedDate}
