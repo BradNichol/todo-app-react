@@ -38,6 +38,7 @@ function App() {
     }
   ]);
 
+  // function strike through tasks when complete
   const completeStrikethough = id => {
     const newTaskArr = tasks.map(task => {
       if (task.id === id) {
