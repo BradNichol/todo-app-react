@@ -57,6 +57,7 @@ function App() {
   const addNewTask = (text, type, dueDate) => {
     // create a new object for the task
     const newTaskObj = {
+      id: Math.random() * 1000, // this value will come from database soon
       task: text,
       type: type,
       dueDate: dueDate,
