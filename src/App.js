@@ -54,6 +54,21 @@ function App() {
     SetTasks(newTaskArr);
   };
 
+  const addNewTask = (text, type, dueDate) => {
+    // create a new object for the task
+    const newTaskObj = {
+      task: text,
+      type: type,
+      dueDate: dueDate,
+      completed: false
+    };
+
+    // create new array to combine current tasks with the new task obj
+    const allTasks = [...tasks, newTaskObj];
+
+    SetTasks(allTasks);
+  }
+
   // function to count 'todays' count only, not all days
   const taskCountFunc = () => {
     let count = 0;
