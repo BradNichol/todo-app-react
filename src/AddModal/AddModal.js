@@ -36,6 +36,11 @@ const AddModal = () => {
     setOpen(false);
   };
 
+  const [selectedDate, setSelectedDate] = useState();
+  const handleDateChange = (date) => {
+    setSelectedDate(date);
+  };
+
   const classes = useStyles();
 
   return (
@@ -57,9 +62,13 @@ const AddModal = () => {
             <TextField id ="task" label="Task" />
             <TextField id ="type" label="Type" />
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
-            <KeyboardDatePicker
-              
-            />
+              <KeyboardDatePicker
+                value={selectedDate}
+                label="Due Date"
+                onChange={handleDateChange}
+
+                
+              />
             </MuiPickersUtilsProvider>
             
           </form>
