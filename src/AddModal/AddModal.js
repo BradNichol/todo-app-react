@@ -3,9 +3,12 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Fab from "@material-ui/core/Fab";
 import AddIcon from "@material-ui/icons/Add";
-import TextField from '@material-ui/core/TextField';
-import DateFnsUtils from '@date-io/date-fns';
-import {MuiPickersUtilsProvider, KeyboardDatePicker} from '@material-ui/pickers';
+import TextField from "@material-ui/core/TextField";
+import DateFnsUtils from "@date-io/date-fns";
+import {
+  MuiPickersUtilsProvider,
+  KeyboardDatePicker
+} from "@material-ui/pickers";
 
 const AddModal = () => {
   const useStyles = makeStyles(theme => ({
@@ -37,7 +40,7 @@ const AddModal = () => {
   };
 
   const [selectedDate, setSelectedDate] = useState();
-  const handleDateChange = (date) => {
+  const handleDateChange = date => {
     setSelectedDate(date);
   };
 
@@ -59,21 +62,16 @@ const AddModal = () => {
         <div className={classes.paper}>
           <form>
             <h3>Add A Task</h3>
-            <TextField id ="task" label="Task" />
-            <TextField id ="type" label="Type" />
+            <TextField id="task" label="Task" />
+            <TextField id="type" label="Type" />
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
               <KeyboardDatePicker
                 value={selectedDate}
                 label="Due Date"
                 onChange={handleDateChange}
-
-                
               />
             </MuiPickersUtilsProvider>
-            
           </form>
-
-
         </div>
       </Modal>
     </div>
