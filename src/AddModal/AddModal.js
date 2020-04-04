@@ -51,7 +51,7 @@ const AddModal = (props) => {
   const [type, setType] = useState("");
   const handleTypeChange = event => setType(event.target.value);
 
-  const handleAddTask = () => props.addNewTaskFunc();
+  const handleAddTask = () => props.addNewTaskFunc(taskText, type, selectedDate);
 
   const classes = useStyles("");
 
