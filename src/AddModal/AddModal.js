@@ -48,7 +48,7 @@ const AddModal = (props) => {
   const handleDateChange = date => setSelectedDate(date);
 
   // state to control type select change
-  const [type, setType] = useState();
+  const [type, setType] = useState("");
   const handleTypeChange = event => setType(event.target.value);
 
   const handleAddTask = () => props.addNewTaskFunc();
