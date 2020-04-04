@@ -32,29 +32,20 @@ const AddModal = (props) => {
     }
   }));
 
+  // state to control open / close of modal
   const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
+  // state to control date picker change
   const [selectedDate, setSelectedDate] = useState();
-  const handleDateChange = date => {
-    setSelectedDate(date);
-  };
+  const handleDateChange = date => setSelectedDate(date);
 
+  // state to control type select change
   const [type, setType] = useState();
-  const handleTypeChange = event => {
-    setType(event.target.value);
-  };
+  const handleTypeChange = event => setType(event.target.value)
 
-  const handleAddTask = () => {
-    props.addNewTaskFunc();
-  };
+  const handleAddTask = () => props.addNewTaskFunc();
 
   const classes = useStyles("");
 
