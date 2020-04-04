@@ -13,7 +13,7 @@ function QuoteBox() {
       return response.json();
     })
     .then((data) => {
-      console.log(data.contents.quotes[0].quote);
+      return data.contents.quotes[0].quote;
     });
   }
   
