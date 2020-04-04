@@ -13,7 +13,7 @@ import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import InputLabel from "@material-ui/core/InputLabel";
 
-const AddModal = () => {
+const AddModal = (props) => {
   const useStyles = makeStyles(theme => ({
     modal: {
       display: "flex",
@@ -50,6 +50,10 @@ const AddModal = () => {
   const [type, setType] = useState();
   const handleTypeChange = event => {
     setType(event.target.value);
+  };
+
+  const handleAddTask = () => {
+    props.addNewTaskFunc();
   };
 
   const classes = useStyles("");
