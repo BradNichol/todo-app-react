@@ -37,13 +37,17 @@ const AddModal = (props) => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  // state to control task input field
+  const [taskText, setTaskText] = useState("");
+  const handleTaskTextChange = event => setTaskText(event.target.value);
+
   // state to control date picker change
   const [selectedDate, setSelectedDate] = useState();
   const handleDateChange = date => setSelectedDate(date);
 
   // state to control type select change
   const [type, setType] = useState();
-  const handleTypeChange = event => setType(event.target.value)
+  const handleTypeChange = event => setType(event.target.value);
 
   const handleAddTask = () => props.addNewTaskFunc();
 
@@ -65,7 +69,7 @@ const AddModal = (props) => {
         <div className={classes.paper}>
           <form>
             <h3>Add A Task</h3>
-            <TextField id="task" label="Task" />
+            <TextField id="task" label="Task" value={taskText} onChange={handleTaskTextChange} />
             <InputLabel id="task-type">Task Type</InputLabel>
             <Select
               labelId="task-type"
