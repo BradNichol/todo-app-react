@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Fab from "@material-ui/core/Fab";
 import AddIcon from "@material-ui/icons/Add";
+import TextField from '@material-ui/core/TextField';
 
 const AddModal = () => {
   const useStyles = makeStyles(theme => ({
@@ -48,7 +49,15 @@ const AddModal = () => {
       </Fab>
 
       <Modal open={open} className={classes.modal} onClose={handleClose}>
-        <div className={classes.paper}>Test Modal</div>
+        <div className={classes.paper}>
+          <form>
+            <h3>Add A Task</h3>
+            <TextField id ="task" label="Task" />
+            <TextField id ="type" label="Type" />
+          </form>
+
+
+        </div>
       </Modal>
     </div>
   );
