@@ -116,7 +116,7 @@ function App() {
             );
           }
         })}
-        <AddModal />
+        <AddModal addNewTaskFunc={addNewTask} />
       </main>
     </div>
   );
