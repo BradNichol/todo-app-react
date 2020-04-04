@@ -3,16 +3,20 @@ import "./QuoteBox.css";
 
 function QuoteBox() {
   
-  // fetch API is used to get data from URL resources
-  fetch('https://quotes.rest/qod?language=en')
-  //.then returns a promise and data can be chained to next .then. 
-  .then((response) => {
-    //returns data in JSON format
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data.contents.quotes[0].quote);
-  });
+  const getQuote = () => {
+
+    // fetch API is used to get data from URL resources
+    fetch('https://quotes.rest/qod?language=en')
+    //.then returns a promise and data can be chained to next .then. 
+    .then((response) => {
+      //returns data in JSON format
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data.contents.quotes[0].quote);
+    });
+  }
+  
   
 
   return (
