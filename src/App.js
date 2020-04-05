@@ -5,6 +5,7 @@ import QuoteBox from "./QuoteBox/QuoteBox";
 import DatePeriod from "./DatePeriod/DatePeriod";
 import Task from "./Task/Task";
 import AddModal from "./AddModal/AddModal";
+import {format} from "date-fns";
 
 function App() {
   const [tasks, SetTasks] = useState([
@@ -60,7 +61,7 @@ function App() {
       id: Math.random() * 1000, // this value will come from database soon
       task: text,
       type: type,
-      dueDate: dueDate,
+      dueDate: format(dueDate, 'dd/MM/yyyy'), // uses date-fns format
       completed: false
     };
 
