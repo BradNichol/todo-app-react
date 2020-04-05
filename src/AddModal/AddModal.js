@@ -54,7 +54,7 @@ const AddModal = (props) => {
   const handleTaskTextChange = event => setTaskText(event.target.value);
 
   // state to control date picker change
-  const [selectedDate, setSelectedDate] = useState();
+  const [selectedDate, setSelectedDate] = useState(new Date());
   const handleDateChange = date => setSelectedDate(date);
 
   // state to control type select change
