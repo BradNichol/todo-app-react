@@ -13,6 +13,7 @@ import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import InputLabel from "@material-ui/core/InputLabel";
 import Button from '@material-ui/core/Button';
+import FormGroup from '@material-ui/core/FormGroup';
 
 
 const AddModal = (props) => {
@@ -77,28 +78,30 @@ const AddModal = (props) => {
         <div className={classes.paper}>
           <h3>Add A Task</h3>
           <form>
-            <TextField id="task" label="Task" value={taskText} onChange={handleTaskTextChange} />
-            <InputLabel id="task-type">Task Type</InputLabel>
-            <Select
-              labelId="task-type"
-              id="task-type-select"
-              value={type}
-              onChange={handleTypeChange}
-            >
-              <MenuItem value="Work">Work</MenuItem>
-              <MenuItem value="Personal">Personal</MenuItem>
-            </Select>
+            <FormGroup>
+              <TextField id="task" label="Task" value={taskText} onChange={handleTaskTextChange} />
+              <InputLabel id="task-type">Task Type</InputLabel>
+              <Select
+                labelId="task-type"
+                id="task-type-select"
+                value={type}
+                onChange={handleTypeChange}
+              >
+                <MenuItem value="Work">Work</MenuItem>
+                <MenuItem value="Personal">Personal</MenuItem>
+              </Select>
 
-            <MuiPickersUtilsProvider utils={DateFnsUtils}>
-              <KeyboardDatePicker
-                value={selectedDate}
-                label="Due Date"
-                onChange={handleDateChange}
-              />
-            </MuiPickersUtilsProvider>
-            <Button variant="contained" color="primary" onClick={handleAddTask}>
-              Add Task
-            </Button>
+              <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                <KeyboardDatePicker
+                  value={selectedDate}
+                  label="Due Date"
+                  onChange={handleDateChange}
+                />
+              </MuiPickersUtilsProvider>
+              <Button variant="contained" color="primary" onClick={handleAddTask}>
+                Add Task
+              </Button>
+            </FormGroup>
           </form>
         </div>
       </Modal>
