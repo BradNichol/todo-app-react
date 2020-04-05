@@ -65,7 +65,7 @@ const AddModal = (props) => {
     props.addNewTaskFunc(taskText, type, selectedDate);
     setTaskText("");
     setType();
-    setSelectedDate("");
+    setSelectedDate(new Date());
     setOpen(false);
   };
 
