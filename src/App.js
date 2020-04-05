@@ -75,7 +75,7 @@ function App() {
   const taskCountFunc = () => {
     let count = 0;
     tasks.forEach(task => {
-      if (!task.completed && task.dueDate === "2020-03-04") { // TODO: get todays date
+      if (!task.completed && task.dueDate === todaysDate) { // TODO: get todays date
         count++;
       }
     });
