@@ -26,7 +26,10 @@ const AddModal = (props) => {
     paper: {
       backgroundColor: "#ffffff",
       padding: theme.spacing(2, 4, 3),
-      width: "80%"
+      width: 'auto',
+      [theme.breakpoints.up('lg')]: {
+        width: '50%'
+      },
     },
     fab: {
       position: "fixed",
