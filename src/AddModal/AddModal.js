@@ -32,6 +32,12 @@ const AddModal = (props) => {
       position: "fixed",
       bottom: theme.spacing(2),
       right: theme.spacing(2)
+    },
+    modalForm: {
+      padding: 10
+    },
+    modalButton: {
+      marginTop: 40
     }
   }));
 
@@ -78,7 +84,7 @@ const AddModal = (props) => {
         <div className={classes.paper}>
           <h3>Add A Task</h3>
           <form>
-            <FormGroup>
+            <FormGroup className={classes.modalForm}>
               <TextField id="task" label="Task" value={taskText} onChange={handleTaskTextChange} />
               <InputLabel id="task-type">Task Type</InputLabel>
               <Select
@@ -98,7 +104,7 @@ const AddModal = (props) => {
                   onChange={handleDateChange}
                 />
               </MuiPickersUtilsProvider>
-              <Button variant="contained" color="primary" onClick={handleAddTask}>
+              <Button className={classes.modalButton} variant="contained" color="primary" onClick={handleAddTask}>
                 Add Task
               </Button>
             </FormGroup>
