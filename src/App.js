@@ -81,6 +81,9 @@ function App() {
     });
     return count;
   };
+  
+  // get today's date dd/mm/yyyy
+  const todaysDate = format(new Date(),'dd/MM/yyyy');
 
   return (
     <div className="App">
@@ -89,7 +92,7 @@ function App() {
         <QuoteBox />
         <DatePeriod title="TODAY" />
         {tasks.map(task => {
-          if (task.dueDate === "2020-03-04") {
+          if (task.dueDate === todaysDate) {
             return (
               <Task
                 key={task.id}
