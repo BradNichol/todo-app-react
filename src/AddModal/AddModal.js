@@ -75,8 +75,8 @@ const AddModal = (props) => {
 
       <Modal open={open} className={classes.modal} onClose={handleClose}>
         <div className={classes.paper}>
+          <h3>Add A Task</h3>
           <form>
-            <h3>Add A Task</h3>
             <TextField id="task" label="Task" value={taskText} onChange={handleTaskTextChange} />
             <InputLabel id="task-type">Task Type</InputLabel>
             <Select
