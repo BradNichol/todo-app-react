@@ -7,22 +7,30 @@ import Badge from "@material-ui/core/Badge";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 
 function Nav(props) {
-  const useStyles = makeStyles({
+  const useStyles = makeStyles((theme) => ({
     root: {
-      backgroundColor: "#2b71c2"
+      display: "flex",
+      backgroundColor: "#2b71c2",
+    },
+
+    toolbar: {
+      [theme.breakpoints.up("lg")]: {
+        width: "50%",
+        margin: "auto",
+      },
     },
 
     taskNotification: {
-        marginLeft: 'auto'
-    }
-  });
+      marginLeft: "auto",
+    },
+  }));
 
   const classes = useStyles();
   return (
     <header className="container-fluid">
       <nav>
         <AppBar position="fixed" className={classes.root}>
-          <Toolbar>
+          <Toolbar className={classes.toolbar}>
             GET SH*T DONE
             <IconButton className={classes.taskNotification}>
               <Badge badgeContent={props.taskCount} color="secondary">
