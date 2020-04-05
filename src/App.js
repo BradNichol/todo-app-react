@@ -105,9 +105,9 @@ function App() {
             );
           }
         })}
-        <DatePeriod title="TOMORROW" />
+        <DatePeriod title="FUTURE" />
         {tasks.map(task => {
-          if (task.dueDate === "2020-03-05") {
+          if (task.dueDate > todaysDate) {
             return (
               <Task
                 key={task.id}
