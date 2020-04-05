@@ -17,7 +17,8 @@ function Task(props) {
       marginTop: 5
     },
     content: {
-      margin: 'auto'
+      margin: 'auto',
+      color: 'white'
     }
   })
   const classes = useStyles();
