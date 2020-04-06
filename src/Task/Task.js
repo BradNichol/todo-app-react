@@ -9,6 +9,12 @@ function Task(props) {
     props.markCompleteFunc(props.id);
   };
 
+  // obj to hold colour values per task type
+  const typeTabColour = {
+    personal: 'green',
+    work: 'yellow'
+  };
+
   const useStyles = makeStyles({
     root: {
       display: "flex",
@@ -20,22 +26,20 @@ function Task(props) {
       color: "white",
     },
     typeTab: {
-      width: 10
+      width: 10,
+      // colour pulled from obj
+      backgroundColor: typeTabColour[props.type]
     }
   });
   const classes = useStyles();
 
-  // obj to hold colour values per task type
-  const typeTabColour = {
-    personal: 'green',
-    work: 'yellow'
-  };
+  
 
   return (
     <div>
       
       <Card className={classes.root} boxShadow={3}>
-        <div className={classes.typeTab} style={{backgroundColor: typeTabColour[props.type]}}>&nbsp;</div>
+        <div className={classes.typeTab} >&nbsp;</div>
         <CardContent className={classes.content}>
           <input
             className="form-check-input"
