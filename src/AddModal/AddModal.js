@@ -100,8 +100,8 @@ const AddModal = (props) => {
                 value={type}
                 onChange={handleTypeChange}
               >
-                <MenuItem value="Work">Work</MenuItem>
-                <MenuItem value="Personal">Personal</MenuItem>
+                <MenuItem value="work">Work</MenuItem>
+                <MenuItem value="personal">Personal</MenuItem>
               </Select>
 
               <MuiPickersUtilsProvider utils={DateFnsUtils}>
