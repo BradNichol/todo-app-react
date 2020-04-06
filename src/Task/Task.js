@@ -12,7 +12,6 @@ function Task(props) {
   const useStyles = makeStyles({
     root: {
       display: "flex",
-      minWidth: "auto",
       backgroundColor: "#224982",
       marginTop: 5,
     },
