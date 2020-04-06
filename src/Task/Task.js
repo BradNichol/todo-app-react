@@ -24,10 +24,18 @@ function Task(props) {
     }
   });
   const classes = useStyles();
+
+  // obj to hold colour values per task type
+  const typeTabColour = {
+    personal: 'green',
+    work: 'yellow'
+  };
+
   return (
     <div>
+      
       <Card className={classes.root} boxShadow={3}>
-        <div className={classes.typeTab} style={{backgroundColor: 'green'}}>&nbsp;</div>
+        <div className={classes.typeTab} style={{backgroundColor: typeTabColour[props.type]}}>&nbsp;</div>
         <CardContent className={classes.content}>
           <input
             className="form-check-input"
