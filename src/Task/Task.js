@@ -19,11 +19,15 @@ function Task(props) {
       margin: "auto",
       color: "white",
     },
+    typeTab: {
+      width: 10
+    }
   });
   const classes = useStyles();
   return (
     <div>
       <Card className={classes.root} boxShadow={3}>
+        <div className={classes.typeTab} style={{backgroundColor: 'green'}}>&nbsp;</div>
         <CardContent className={classes.content}>
           <input
             className="form-check-input"
