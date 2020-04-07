@@ -3,9 +3,9 @@ import "./Task.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import Checkbox from '@material-ui/core/Checkbox';
+import Checkbox from "@material-ui/core/Checkbox";
 import IconButton from "@material-ui/core/IconButton";
-import DeleteIcon from '@material-ui/icons/Delete';
+import DeleteIcon from "@material-ui/icons/Delete";
 
 function Task(props) {
   const handleCompletedStrikethrough = () => {
@@ -40,11 +40,8 @@ function Task(props) {
     <div>
       <Card className={classes.root} boxShadow={3}>
         <div className={classes.typeTab}>&nbsp;</div>
+        <Checkbox color="default" onClick={handleCompletedStrikethrough} />
         <CardContent className={classes.content}>
-          <Checkbox 
-            color="default"
-            onClick={handleCompletedStrikethrough}/>
-          
           {props.completed === false ? props.text : <del>{props.text}</del>}
         </CardContent>
         <IconButton>
