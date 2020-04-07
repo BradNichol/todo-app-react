@@ -7,6 +7,8 @@ import Task from "./Task/Task";
 import AddModal from "./AddModal/AddModal";
 import { format } from "date-fns";
 import Snackbar from '@material-ui/core/Snackbar';
+import { makeStyles } from "@material-ui/core/styles";
+
 
 
 function App() {
@@ -104,6 +106,16 @@ function App() {
 
   // get today's date dd/mm/yyyy
   const todaysDate = format(new Date(), "dd/MM/yyyy");
+  
+  // styles for components
+  const useStyles = makeStyles((theme) => ({
+    snackbar: {
+      [theme.breakpoints.down('xs')]: {
+        bottom: 90,
+      }
+    }
+  }));
+  const classes = useStyles();
 
   return (
     <div className="App">
@@ -145,7 +157,7 @@ function App() {
           }
         })}
         <AddModal addNewTaskFunc={addNewTask} />
-        <Snackbar open={open} message={message} autoHideDuration={4000} onClose={handleClose}/>
+        <Snackbar className={classes.snackbar} open={open} message={message} autoHideDuration={4000} onClose={handleClose}/>
       </main>
     </div>
   );
