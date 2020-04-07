@@ -3,7 +3,7 @@ import "./Task.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import Checkbox from "@material-ui/core/Checkbox";
+import Checkbox from '@material-ui/core/Checkbox';
 
 function Task(props) {
   const handleCompletedStrikethrough = () => {
@@ -39,7 +39,10 @@ function Task(props) {
       <Card className={classes.root} boxShadow={3}>
         <div className={classes.typeTab}>&nbsp;</div>
         <CardContent className={classes.content}>
-          <Checkbox color="primary" onClick={handleCompletedStrikethrough} />
+          <Checkbox 
+            color="primary"
+            onClick={handleCompletedStrikethrough}/>
+          
           {props.completed === false ? props.text : <del>{props.text}</del>}
         </CardContent>
       </Card>
