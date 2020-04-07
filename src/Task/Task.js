@@ -4,6 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Checkbox from '@material-ui/core/Checkbox';
+import IconButton from "@material-ui/core/IconButton";
+import DeleteIcon from '@material-ui/icons/Delete';
 
 function Task(props) {
   const handleCompletedStrikethrough = () => {
@@ -45,6 +47,9 @@ function Task(props) {
           
           {props.completed === false ? props.text : <del>{props.text}</del>}
         </CardContent>
+        <IconButton>
+          <DeleteIcon />
+        </IconButton>
       </Card>
     </div>
   );
