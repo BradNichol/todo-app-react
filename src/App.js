@@ -6,6 +6,7 @@ import DatePeriod from "./DatePeriod/DatePeriod";
 import Task from "./Task/Task";
 import AddModal from "./AddModal/AddModal";
 import { format } from "date-fns";
+import ActionMessage from "./ActionMessage";
 
 function App() {
   const [tasks, SetTasks] = useState([
@@ -133,6 +134,7 @@ function App() {
           }
         })}
         <AddModal addNewTaskFunc={addNewTask} />
+        <ActionMessage />
       </main>
     </div>
   );
