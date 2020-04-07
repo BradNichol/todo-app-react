@@ -163,7 +163,7 @@ function App() {
         <Snackbar
           className={classes.snackbar}
           open={open}
-          autoHideDuration={4000}
+          autoHideDuration={2000}
           onClose={handleClose}
         >
           <SnackbarContent className={classes.content} message={message} />
