@@ -77,7 +77,6 @@ function App() {
     let count = 0;
     tasks.forEach((task) => {
       if (!task.completed && task.dueDate === todaysDate) {
-        // TODO: get todays date
         count++;
       }
     });
