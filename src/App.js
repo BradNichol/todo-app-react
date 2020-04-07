@@ -8,6 +8,7 @@ import AddModal from "./AddModal/AddModal";
 import { format } from "date-fns";
 import Snackbar from '@material-ui/core/Snackbar';
 import { makeStyles } from "@material-ui/core/styles";
+import { SnackbarContent } from "@material-ui/core";
 
 
 
@@ -110,9 +111,15 @@ function App() {
   // styles for components
   const useStyles = makeStyles((theme) => ({
     snackbar: {
+      color: 'green',
       [theme.breakpoints.down('xs')]: {
         bottom: 90,
       }
+    },
+    content: {
+      display: 'flex',
+      justifyContent: 'center',
+      backgroundColor: 'black'
     }
   }));
   const classes = useStyles();
@@ -157,7 +164,9 @@ function App() {
           }
         })}
         <AddModal addNewTaskFunc={addNewTask} />
-        <Snackbar className={classes.snackbar} open={open} message={message} autoHideDuration={4000} onClose={handleClose}/>
+        <Snackbar className={classes.snackbar} open={open} autoHideDuration={4000} onClose={handleClose}>
+          <SnackbarContent  className={classes.content} message={message}/>
+        </Snackbar>
       </main>
     </div>
   );
