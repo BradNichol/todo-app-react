@@ -40,7 +40,7 @@ function Task(props) {
         <div className={classes.typeTab}>&nbsp;</div>
         <CardContent className={classes.content}>
           <Checkbox 
-            color="primary"
+            color="default"
             onClick={handleCompletedStrikethrough}/>
           
           {props.completed === false ? props.text : <del>{props.text}</del>}
