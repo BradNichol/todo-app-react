@@ -132,7 +132,6 @@ function App() {
           }
         })}
         <AddModal addNewTaskFunc={addNewTask} />
-        <ActionMessage />
       </main>
     </div>
   );
