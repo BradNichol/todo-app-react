@@ -41,8 +41,10 @@ function App() {
     },
   ]);
 
+  // state to control message box (snackbar)
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState("");
+  const handleClose = () => setOpen(false);
 
 
   // function strike through tasks when complete
@@ -140,7 +142,7 @@ function App() {
           }
         })}
         <AddModal addNewTaskFunc={addNewTask} />
-        <Snackbar open={open} message={message} />
+        <Snackbar open={open} message={message} autoHideDuration={4000} onClose={handleClose}/>
       </main>
     </div>
   );
