@@ -6,6 +6,8 @@ import DatePeriod from "./DatePeriod/DatePeriod";
 import Task from "./Task/Task";
 import AddModal from "./AddModal/AddModal";
 import { format } from "date-fns";
+import Snackbar from '@material-ui/core/Snackbar';
+
 
 function App() {
   const [tasks, SetTasks] = useState([
@@ -39,6 +41,10 @@ function App() {
     },
   ]);
 
+  const [open, setOpen] = useState(false);
+  const [message, setMessage] = useState("");
+
+
   // function strike through tasks when complete
   const completeStrikethough = (id) => {
     const newTaskArr = tasks.map((task) => {
@@ -67,6 +73,8 @@ function App() {
 
     // create new array to combine current tasks with the new task obj
     const allTasks = [...tasks, newTaskObj];
+    setMessage('New task added')
+    setOpen(true)
 
     SetTasks(allTasks);
   };
@@ -132,6 +140,7 @@ function App() {
           }
         })}
         <AddModal addNewTaskFunc={addNewTask} />
+        <Snackbar open={open} message={message} />
       </main>
     </div>
   );
