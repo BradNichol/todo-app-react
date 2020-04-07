@@ -48,8 +48,8 @@ function Task(props) {
         <CardContent className={classes.content}>
           {props.completed === false ? props.text : <del>{props.text}</del>}
         </CardContent>
-        <IconButton>
-          <DeleteIcon onClick={handleDeleteTask}/>
+        <IconButton onClick={handleDeleteTask}>
+          <DeleteIcon />
         </IconButton>
       </Card>
     </div>
