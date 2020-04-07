@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import Snackbar from '@material-ui/core/Snackbar';
 
+
 function ActionMessage () {
 
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
 
 
     return (
-        <div></div>
+        <div>
+            <Snackbar open={open} message="Action message">
+                    
+            </Snackbar>
+        </div>
     )
 
 
