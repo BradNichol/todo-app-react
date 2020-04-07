@@ -81,7 +81,16 @@ function App() {
     });
     return count;
   };
-  
+  // function to "delete" tasks. Shows filtered list exluding task with deleted id
+  const deleteTask = (id) => {
+
+    const deletedTasks = tasks.filter(task => {
+      return task.id !== id;
+    });
+    SetTasks(deletedTasks)
+  };
+
+
   // get today's date dd/mm/yyyy
   const todaysDate = format(new Date(),'dd/MM/yyyy');
 
