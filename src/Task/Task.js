@@ -42,7 +42,7 @@ function Task(props) {
 
   return (
     <div>
-      <Card className={classes.root} boxShadow={3}>
+      <Card className={classes.root}>
         <div className={classes.typeTab}>&nbsp;</div>
         <Checkbox color="default" onClick={handleCompletedStrikethrough} />
         <CardContent className={classes.content}>
