@@ -6,11 +6,9 @@ import DatePeriod from "./DatePeriod/DatePeriod";
 import Task from "./Task/Task";
 import AddModal from "./AddModal/AddModal";
 import { format } from "date-fns";
-import Snackbar from '@material-ui/core/Snackbar';
+import Snackbar from "@material-ui/core/Snackbar";
 import { makeStyles } from "@material-ui/core/styles";
 import { SnackbarContent } from "@material-ui/core";
-
-
 
 function App() {
   const [tasks, SetTasks] = useState([
@@ -49,7 +47,6 @@ function App() {
   const [message, setMessage] = useState("");
   const handleClose = () => setOpen(false);
 
-
   // function strike through tasks when complete
   const completeStrikethough = (id) => {
     const newTaskArr = tasks.map((task) => {
@@ -62,8 +59,8 @@ function App() {
       }
       return task;
     });
-    setMessage('Task completed')
-    setOpen(true)
+    setMessage("Task completed");
+    setOpen(true);
     SetTasks(newTaskArr);
   };
 
@@ -79,9 +76,8 @@ function App() {
 
     // create new array to combine current tasks with the new task obj
     const allTasks = [...tasks, newTaskObj];
-    setMessage(`${newTaskObj.type} task created`)
-    setOpen(true)
-
+    setMessage(`${newTaskObj.type} task created`);
+    setOpen(true);
     SetTasks(allTasks);
   };
 
@@ -100,27 +96,27 @@ function App() {
     const deletedTasks = tasks.filter((task) => {
       return task.id !== id;
     });
-    setMessage('Task deleted')
-    setOpen(true)
+    setMessage("Task deleted");
+    setOpen(true);
     SetTasks(deletedTasks);
   };
 
   // get today's date dd/mm/yyyy
   const todaysDate = format(new Date(), "dd/MM/yyyy");
-  
+
   // styles for components
   const useStyles = makeStyles((theme) => ({
     snackbar: {
-      color: 'green',
-      [theme.breakpoints.down('xs')]: {
+      color: "green",
+      [theme.breakpoints.down("xs")]: {
         bottom: 90,
-      }
+      },
     },
     content: {
-      display: 'flex',
-      justifyContent: 'center',
-      backgroundColor: 'black'
-    }
+      display: "flex",
+      justifyContent: "center",
+      backgroundColor: "black",
+    },
   }));
   const classes = useStyles();
 
@@ -164,8 +160,13 @@ function App() {
           }
         })}
         <AddModal addNewTaskFunc={addNewTask} />
-        <Snackbar className={classes.snackbar} open={open} autoHideDuration={4000} onClose={handleClose}>
-          <SnackbarContent  className={classes.content} message={message}/>
+        <Snackbar
+          className={classes.snackbar}
+          open={open}
+          autoHideDuration={4000}
+          onClose={handleClose}
+        >
+          <SnackbarContent className={classes.content} message={message} />
         </Snackbar>
       </main>
     </div>
