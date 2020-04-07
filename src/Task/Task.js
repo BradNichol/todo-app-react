@@ -12,6 +12,10 @@ function Task(props) {
     props.markCompleteFunc(props.id);
   };
 
+  const handleDeleteTask = () => {
+    props.deleteTaskFunc(props.id);
+  };
+
   // obj to hold colour values per task type
   const typeTabColour = {
     personal: "green",
@@ -45,7 +49,7 @@ function Task(props) {
           {props.completed === false ? props.text : <del>{props.text}</del>}
         </CardContent>
         <IconButton>
-          <DeleteIcon />
+          <DeleteIcon onClick={handleDeleteTask}/>
         </IconButton>
       </Card>
     </div>

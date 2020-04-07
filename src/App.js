@@ -127,6 +127,7 @@ function App() {
                 completed={task.completed}
                 dueDate={task.dueDate}
                 markCompleteFunc={completeStrikethough}
+                deleteTaskFunc={deleteTask}
               />
             );
           }
