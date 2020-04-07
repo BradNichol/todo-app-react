@@ -59,7 +59,8 @@ function App() {
       }
       return task;
     });
-
+    setMessage('Task completed')
+    setOpen(true)
     SetTasks(newTaskArr);
   };
 
@@ -75,7 +76,7 @@ function App() {
 
     // create new array to combine current tasks with the new task obj
     const allTasks = [...tasks, newTaskObj];
-    setMessage('New task added')
+    setMessage(`${newTaskObj.type} task created`)
     setOpen(true)
 
     SetTasks(allTasks);
@@ -96,6 +97,8 @@ function App() {
     const deletedTasks = tasks.filter((task) => {
       return task.id !== id;
     });
+    setMessage('Task deleted')
+    setOpen(true)
     SetTasks(deletedTasks);
   };
 
