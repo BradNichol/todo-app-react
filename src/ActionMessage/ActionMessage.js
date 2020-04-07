@@ -6,6 +6,15 @@ function ActionMessage () {
 
     const [open, setOpen] = useState(true);
 
+    const actionMessage = (action) => {
+        const message = {
+          add: 'New task added',
+          deleted: 'Task deleted'
+        }
+        return message[action];
+      }
+    
+    actionMessage('add')
 
     return (
         <div>
