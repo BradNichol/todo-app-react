@@ -23,8 +23,12 @@ function QuoteBox() {
 
   
   const useStyles = makeStyles(() => ({
-    expansionpanel: {
-      backgroundColor: '#2071C2'
+    expansionPanel: {
+      backgroundColor: '#2071C2', 
+      boxShadow: 'none',
+    },
+    expansionPanelSummary: {
+      borderBottom: '1px solid #224982'
     }
   
   }))
@@ -32,8 +36,8 @@ function QuoteBox() {
   const classes = useStyles();
 
   return (
-    <ExpansionPanel className={classes.expansionpanel}>
-      <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+    <ExpansionPanel className={classes.expansionPanel}>
+      <ExpansionPanelSummary className={classes.expansionPanelSummary} expandIcon={<ExpandMoreIcon />}>
         Quote of the day
       </ExpansionPanelSummary>
       <ExpansionPanelDetails>
