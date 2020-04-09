@@ -1,5 +1,9 @@
 import React from "react";
 import "./QuoteBox.css";
+import ExpansionPanel from "@material-ui/core/ExpansionPanel";
+import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
+import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 function QuoteBox() {
   // fetch API is used to get data from URL resources
@@ -16,10 +20,17 @@ function QuoteBox() {
     });
 
   return (
-    <div className="quoteBox">
-      <p id="quote"></p>
-      <p id="author"></p>
-    </div>
+    <ExpansionPanel>
+      <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+        Quote of the day
+      </ExpansionPanelSummary>
+      <ExpansionPanelDetails>
+        <div className="quoteBox">
+          <p id="quote"></p>
+          <p id="author"></p>
+        </div>
+      </ExpansionPanelDetails>
+    </ExpansionPanel>
   );
 }
 
