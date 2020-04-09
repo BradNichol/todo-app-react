@@ -54,13 +54,13 @@ function App() {
         if (task.completed) {
           task.completed = false;
         } else {
+          setMessage("Task completed");
+          setOpen(true);
           task.completed = true;
         }
       }
       return task;
     });
-    setMessage("Task completed");
-    setOpen(true);
     SetTasks(newTaskArr);
   };
 
