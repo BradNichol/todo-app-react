@@ -5,16 +5,18 @@
 </p>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 Currently building a To Do list application using React and Material-ui.
+
+Aptly named Get Sh*t Done, a tong-in-cheek reference to one of the world's most popular productivity systems Get Things Done (GTD).
 
 
 ## Objectives
 1. To develop a front-end application that utilises all CRUD operations using State Management in React.
 2. Connect the front-end with a MySQL database backend hosted on AWS.
 
-## Wireframes & Protype Mockup
+## Wireframes & Prototype Mockup
 1. Initial template
+Quick sketch to draw out the key features. (Apologies, I'm no artist).
 
 <p align="center">
     <img alt="GSD" src="./readme/mobile.jpg" width="200" />
