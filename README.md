@@ -17,18 +17,18 @@ Currently building a To Do list application using React and Material-ui.
 1. Initial template
 
 <p align="center">
-    <img alt="GSD" src="./readme/mobile.jpg" width="150" />
+    <img alt="GSD" src="./readme/mobile.jpg" width="200" />
 </p>
 
 2. Mockup using FluidUI
 
 <p align="center">
-    <img alt="GSD" src="./readme/1-main.jpeg" width="150" />
+    <img alt="GSD" src="./readme/1-main.jpeg" width="200" />
 </p>
 
 ## Final App Design
 Currently live and accessible via link above. I am really happy that I've managed to acheive my intended designs with React & Material-ui.
 
 <p align="center">
-    <img alt="GSD" src="./readme/final.png" width="150" />
+    <img alt="GSD" src="./readme/final.png" width="200" />
 </p>
