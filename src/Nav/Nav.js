@@ -5,6 +5,7 @@ import IconButton from "@material-ui/core/IconButton";
 import { makeStyles } from "@material-ui/core/styles";
 import Badge from "@material-ui/core/Badge";
 import NotificationsIcon from "@material-ui/icons/Notifications";
+import Logo from "./GSD-03.png";
 
 function Nav(props) {
   const useStyles = makeStyles((theme) => ({
@@ -31,7 +32,7 @@ function Nav(props) {
       <nav>
         <AppBar position="fixed" className={classes.root}>
           <Toolbar className={classes.toolbar}>
-            GET SH*T DONE
+            <img src={Logo} width="150" />
             <IconButton className={classes.taskNotification}>
               <Badge badgeContent={props.taskCount} color="secondary">
                 <NotificationsIcon />
