@@ -28,7 +28,7 @@ function Nav(props) {
 
   const classes = useStyles();
   return (
-    <header className="container-fluid">
+    <header>
       <nav>
         <AppBar position="fixed" className={classes.root}>
           <Toolbar className={classes.toolbar}>
