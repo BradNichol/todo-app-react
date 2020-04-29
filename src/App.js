@@ -19,6 +19,7 @@ function App() {
     axios
       .get("https://2ss5e0jzw2.execute-api.eu-west-2.amazonaws.com/dev/tasks")
       .then((response) => {
+        console.log(response.data);
         SetTasks(response.data);
       })
       .catch((err) => {});
@@ -109,15 +110,15 @@ function App() {
         <QuoteBox />
         <DatePeriod title="TODAY" />
         {tasks.map((task) => {
-          if (task.dueDate === todaysDate) {
+          if (task.due_date === '2020-04-29T00:00:00.000Z') {
             return (
               <Task
-                key={task.id}
-                id={task.id}
+                key={task.task_id}
+                id={task.task_id}
                 text={task.task}
-                type={task.type}
+                type={task.type_id}
                 completed={task.completed}
-                dueDate={task.dueDate}
+                dueDate={task.due_date}
                 markCompleteFunc={completeStrikethough}
                 deleteTaskFunc={deleteTask}
               />
