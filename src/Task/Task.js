@@ -35,7 +35,7 @@ function Task(props) {
     typeTab: {
       width: 10,
       // colour pulled from obj
-      backgroundColor: typeTabColour[props.type_id],
+      backgroundColor: typeTabColour[props.type],
     },
   });
   const classes = useStyles();
