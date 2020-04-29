@@ -12,36 +12,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { SnackbarContent } from "@material-ui/core";
 
 function App() {
-  const [tasks, SetTasks] = useState([
-    {
-      id: 1,
-      task: "Organise a meeting",
-      type: "work",
-      dueDate: "2020-03-04",
-      completed: false,
-    },
-    {
-      id: 2,
-      task: "Quarantine",
-      type: "work",
-      dueDate: "2020-03-04",
-      completed: false,
-    },
-    {
-      id: 3,
-      task: "Buy milk",
-      type: "personal",
-      dueDate: "2020-03-04",
-      completed: false,
-    },
-    {
-      id: 4,
-      task: "go for a run",
-      type: "personal",
-      dueDate: "2020-03-05",
-      completed: false,
-    },
-  ]);
+  const [tasks, SetTasks] = useState([]);
 
   // state to control message box (snackbar)
   const [open, setOpen] = useState(false);
