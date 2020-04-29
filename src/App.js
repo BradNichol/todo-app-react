@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 import Nav from "./Nav/Nav";
@@ -14,6 +14,21 @@ import { SnackbarContent } from "@material-ui/core";
 function App() {
   const [tasks, SetTasks] = useState([]);
 
+  useEffect(() => {
+
+    // fetch tasks from backend 
+    axios.get('https://2ss5e0jzw2.execute-api.eu-west-2.amazonaws.com/dev/tasks')
+      .then(response => {
+      
+      });
+      .catch(err => {
+
+      });
+
+  }, []);
+  
+
+  
   // state to control message box (snackbar)
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState("");
