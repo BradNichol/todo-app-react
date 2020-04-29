@@ -18,8 +18,8 @@ function Task(props) {
 
   // obj to hold colour values per task type
   const typeTabColour = {
-    personal: "green",
-    work: "yellow",
+    1: "yellow", // work
+    2: "green", // personal
   };
 
   const useStyles = makeStyles({
@@ -35,7 +35,7 @@ function Task(props) {
     typeTab: {
       width: 10,
       // colour pulled from obj
-      backgroundColor: typeTabColour[props.type],
+      backgroundColor: typeTabColour[props.type_id],
     },
   });
   const classes = useStyles();
@@ -46,7 +46,7 @@ function Task(props) {
         <div className={classes.typeTab}>&nbsp;</div>
         <Checkbox color="default" onClick={handleCompletedStrikethrough} />
         <CardContent className={classes.content}>
-          {props.completed === false ? props.text : <del>{props.text}</del>}
+          {props.completed === 0 ? props.text : <del>{props.text}</del>}
         </CardContent>
         <IconButton onClick={handleDeleteTask}>
           <DeleteIcon />
