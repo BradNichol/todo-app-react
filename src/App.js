@@ -127,15 +127,15 @@ function App() {
         })}
         <DatePeriod title="FUTURE" />
         {tasks.map((task) => {
-          if (task.dueDate > todaysDate) {
+          if (task.due_date > todaysDate) {
             return (
               <Task
-                key={task.id}
-                id={task.id}
+                key={task.task_id}
+                id={task.task_id}
                 text={task.task}
-                type={task.type}
+                type={task.type_id}
                 completed={task.completed}
-                dueDate={task.dueDate}
+                dueDate={task.due_date}
                 markCompleteFunc={completeStrikethough}
                 deleteTaskFunc={deleteTask}
               />
