@@ -5,7 +5,7 @@ import Nav from "./Nav/Nav";
 import QuoteBox from "./QuoteBox/QuoteBox";
 import DatePeriod from "./DatePeriod/DatePeriod";
 import Task from "./Task/Task";
-import AddModal from "./AddModal/AddModal";
+import Modal from "./AddModal/Modal";
 import { format } from "date-fns";
 import Snackbar from "@material-ui/core/Snackbar";
 import { makeStyles } from "@material-ui/core/styles";
@@ -142,7 +142,7 @@ function App() {
             );
           }
         })}
-        <AddModal addNewTaskFunc={addNewTask} />
+        <Modal addNewTaskFunc={addNewTask} />
         <Snackbar
           className={classes.snackbar}
           open={open}
