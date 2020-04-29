@@ -15,20 +15,15 @@ function App() {
   const [tasks, SetTasks] = useState([]);
 
   useEffect(() => {
-
-    // fetch tasks from backend 
-    axios.get('https://2ss5e0jzw2.execute-api.eu-west-2.amazonaws.com/dev/tasks')
-      .then(response => {
-      
-      });
-      .catch(err => {
-
-      });
-
+    // fetch tasks from backend
+    axios
+      .get("https://2ss5e0jzw2.execute-api.eu-west-2.amazonaws.com/dev/tasks")
+      .then((response) => {
+        SetTasks(response.data);
+      })
+      .catch((err) => {});
   }, []);
-  
 
-  
   // state to control message box (snackbar)
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState("");
