@@ -37,8 +37,6 @@ function App() {
         if (task.completed) {
           task.completed = 0;
         } else {
-          setMessage("Task completed");
-          setOpen(true);
           task.completed = 1;
         }
         axios.put(
@@ -46,7 +44,15 @@ function App() {
           {
             completed: task.completed,
           }
-        );
+        )
+        .then((response) => {
+          console.log(response)
+          setMessage("Task updated");
+          setOpen(true);
+        })
+        .catch((err) => {
+          console.log("Error updating", err)
+        })
       }
       return task;
     });
