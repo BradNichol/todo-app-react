@@ -33,14 +33,20 @@ function App() {
   // function strike through tasks when complete
   const completeStrikethough = (id) => {
     const newTaskArr = tasks.map((task) => {
-      if (task.id === id) {
+      if (task.task_id === id) {
         if (task.completed) {
-          task.completed = false;
+          task.completed = 0;
         } else {
           setMessage("Task completed");
           setOpen(true);
-          task.completed = true;
+          task.completed = 1;
         }
+        axios.put(
+          `https://2ss5e0jzw2.execute-api.eu-west-2.amazonaws.com/dev/tasks/${id}`,
+          {
+            completed: task.completed,
+          }
+        );
       }
       return task;
     });
@@ -100,8 +106,8 @@ function App() {
   };
 
   // get today's date dd/mm/yyyy
-  const todaysDate = format(new Date(), "yyyy-MM-dd'T'00:00:00.000")+'Z';
-  
+  const todaysDate = format(new Date(), "yyyy-MM-dd'T'00:00:00.000") + "Z";
+
   // styles for components
   const useStyles = makeStyles((theme) => ({
     snackbar: {
