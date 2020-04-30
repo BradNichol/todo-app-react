@@ -48,20 +48,26 @@ function App() {
   };
 
   const addNewTask = (text, type, dueDate) => {
-    // create a new object for the task
-    const newTaskObj = {
-      id: Math.random() * 1000, // this value will come from database soon
-      task: text,
-      type: type,
-      dueDate: format(dueDate, "dd/MM/yyyy"), // uses date-fns format
-      completed: false,
-    };
-
-    // create new array to combine current tasks with the new task obj
-    const allTasks = [...tasks, newTaskObj];
-    setMessage(`${newTaskObj.type} task created`);
-    setOpen(true);
-    SetTasks(allTasks);
+    // cpass object into axios post directly
+    axios
+      .post(
+        "https://2ss5e0jzw2.execute-api.eu-west-2.amazonaws.com/dev/tasks",
+        {
+          task: text,
+          type_id: type,
+          due_date: dueDate, // uses date-fns format
+        }
+      )
+      .then((response) => {
+        const newTask = response.data;
+        const allTasks = [...tasks, newTask];
+        setMessage("Task created");
+        setOpen(true);
+        SetTasks(allTasks);
+      })
+      .catch((err) => {
+        console.log("Error creating task", err);
+      });
   };
 
   // function to count 'todays' count only, not all days
@@ -119,7 +125,7 @@ function App() {
         <QuoteBox />
         <DatePeriod title="TODAY" />
         {tasks.map((task) => {
-          if (task.due_date === "2020-04-29T00:00:00.000Z") {
+          if (task.due_date === todaysDate) {
             return (
               <Task
                 key={task.task_id}
