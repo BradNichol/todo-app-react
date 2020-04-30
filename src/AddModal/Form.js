@@ -48,8 +48,8 @@ const Form = (props) => {
             value={type}
             onChange={handleTypeChange}
         >
-            <MenuItem value="work">Work</MenuItem>
-            <MenuItem value="personal">Personal</MenuItem>
+            <MenuItem value="1">Work</MenuItem>
+            <MenuItem value="2">Personal</MenuItem>
         </Select>
 
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
