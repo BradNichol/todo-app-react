@@ -19,7 +19,6 @@ function App() {
     axios
       .get("https://2ss5e0jzw2.execute-api.eu-west-2.amazonaws.com/dev/tasks")
       .then((response) => {
-        console.log(response.data);
         SetTasks(response.data);
       })
       .catch((err) => {});
