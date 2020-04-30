@@ -155,6 +155,7 @@ function App() {
         })}
         <DatePeriod title="FUTURE" />
         {tasks.map((task) => {
+          // display dates in future, but also older tasks that haven't been completed
           if (task.due_date > todaysDate || (task.due_date < todaysDate && task.completed === 0)) {
             return (
               <Task
