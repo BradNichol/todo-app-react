@@ -8,8 +8,12 @@ import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from "@material-ui/icons/Delete";
 
 function Task(props) {
+
+  const [checked, setChecked] = React.useState(props.completed ? true : false);
+
   const handleCompletedStrikethrough = () => {
     props.markCompleteFunc(props.id);
+    setChecked(props.completed ? false : true);
   };
 
   const handleDeleteTask = () => {
@@ -44,7 +48,7 @@ function Task(props) {
     <div>
       <Card className={classes.root}>
         <div className={classes.typeTab}>&nbsp;</div>
-        <Checkbox color="default" onClick={handleCompletedStrikethrough} />
+        <Checkbox color="default" checked={checked} onClick={handleCompletedStrikethrough} />
         <CardContent className={classes.content}>
           {props.completed === 1 ? <del>{props.text}</del> : props.text}
         </CardContent>
