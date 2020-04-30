@@ -51,7 +51,7 @@ const AddModal = (props) => {
       <Modal open={open} className={classes.modal} onClose={handleClose}>
         <div className={classes.paper}>
           <h3>Add A Task</h3>
-          <Form {...props}/>
+          <Form handleCloseFunc={handleClose} {...props}/>
         </div>
       </Modal>
     </div>

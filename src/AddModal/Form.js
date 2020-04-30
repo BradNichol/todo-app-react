@@ -29,7 +29,7 @@ const Form = (props) => {
     setTaskText("");
     setType();
     setSelectedDate(new Date());
-    //setOpen(false);
+    props.handleCloseFunc();
   };
 
   return (
