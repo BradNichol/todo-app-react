@@ -39,20 +39,21 @@ function App() {
         } else {
           task.completed = 1;
         }
-        axios.put(
-          `https://2ss5e0jzw2.execute-api.eu-west-2.amazonaws.com/dev/tasks/${id}`,
-          {
-            completed: task.completed,
-          }
-        )
-        .then((response) => {
-          console.log(response)
-          setMessage("Task updated");
-          setOpen(true);
-        })
-        .catch((err) => {
-          console.log("Error updating", err)
-        })
+        axios
+          .put(
+            `https://2ss5e0jzw2.execute-api.eu-west-2.amazonaws.com/dev/tasks/${id}`,
+            {
+              completed: task.completed,
+            }
+          )
+          .then((response) => {
+            console.log(response);
+            setMessage("Task updated");
+            setOpen(true);
+          })
+          .catch((err) => {
+            console.log("Error updating", err);
+          });
       }
       return task;
     });
