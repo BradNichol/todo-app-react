@@ -55,7 +55,7 @@ function App() {
         {
           task: text,
           type_id: type,
-          due_date: dueDate, // uses date-fns format
+          due_date: dueDate,
         }
       )
       .then((response) => {
