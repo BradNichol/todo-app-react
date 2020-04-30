@@ -87,7 +87,7 @@ function App() {
   const taskCountFunc = () => {
     let count = 0;
     tasks.forEach((task) => {
-      if (!task.completed && task.dueDate === todaysDate) {
+      if (!task.completed && task.due_date === todaysDate) {
         count++;
       }
     });
