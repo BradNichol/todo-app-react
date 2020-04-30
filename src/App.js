@@ -76,12 +76,21 @@ function App() {
   };
   // function to "delete" tasks. Shows filtered list exluding task with deleted id
   const deleteTask = (id) => {
-    const deletedTasks = tasks.filter((task) => {
-      return task.id !== id;
-    });
-    setMessage("Task deleted");
-    setOpen(true);
-    SetTasks(deletedTasks);
+    axios
+      .delete(
+        `https://2ss5e0jzw2.execute-api.eu-west-2.amazonaws.com/dev/tasks/${id}`
+      )
+      .then((response) => {
+        const deletedTasks = tasks.filter((task) => {
+          setMessage("Task deleted");
+          setOpen(true);
+          return task.task_id !== id;
+        });
+        SetTasks(deletedTasks);
+      })
+      .catch((err) => {
+        console.log("API error", err);
+      });
   };
 
   // get today's date dd/mm/yyyy
@@ -110,7 +119,7 @@ function App() {
         <QuoteBox />
         <DatePeriod title="TODAY" />
         {tasks.map((task) => {
-          if (task.due_date === '2020-04-29T00:00:00.000Z') {
+          if (task.due_date === "2020-04-29T00:00:00.000Z") {
             return (
               <Task
                 key={task.task_id}
