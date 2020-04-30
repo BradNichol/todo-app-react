@@ -100,8 +100,8 @@ function App() {
   };
 
   // get today's date dd/mm/yyyy
-  const todaysDate = format(new Date(), "dd/MM/yyyy");
-
+  const todaysDate = format(new Date(), "yyyy-MM-dd'T'00:00:00.000")+'Z';
+  
   // styles for components
   const useStyles = makeStyles((theme) => ({
     snackbar: {
