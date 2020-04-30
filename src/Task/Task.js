@@ -46,13 +46,13 @@ function Task(props) {
         <div className={classes.typeTab}>&nbsp;</div>
         <Checkbox color="default" onClick={handleCompletedStrikethrough} />
         <CardContent className={classes.content}>
-          {props.completed === 0 ? props.text : <del>{props.text}</del>}
+          {props.completed === 1 ? <del>{props.text}</del> : props.text}
         </CardContent>
         <IconButton onClick={handleDeleteTask}>
           <DeleteIcon />
         </IconButton>
       </Card>
-    </div>
+    </div>  
   );
 }
 
