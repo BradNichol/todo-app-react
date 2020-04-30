@@ -32,7 +32,7 @@ function Nav(props) {
       <nav>
         <AppBar position="fixed" className={classes.root}>
           <Toolbar className={classes.toolbar}>
-            <img src={Logo} width="150" />
+            <img alt="logo" src={Logo} width="150" />
             <IconButton className={classes.taskNotification}>
               <Badge badgeContent={props.taskCount} color="secondary">
                 <NotificationsIcon />
