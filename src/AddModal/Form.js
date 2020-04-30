@@ -33,13 +33,14 @@ const Form = (props) => {
   };
 
   return (
-    <form>
+    <form onSubmit={handleAddTask}>
         <FormGroup style={{padding:5}}>
         <TextField
             id="task"
             label="Task"
             value={taskText}
             onChange={handleTaskTextChange}
+            required
         />
         <InputLabel id="task-type">Task Type</InputLabel>
         <Select
@@ -63,7 +64,7 @@ const Form = (props) => {
             style={{marginTop: 40}}
             variant="contained"
             color="primary"
-            onClick={handleAddTask}
+            type="submit"
         >
             Add Task
         </Button>
