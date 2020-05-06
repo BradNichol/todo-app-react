@@ -12,7 +12,8 @@ Aptly named Get Sh*t Done, a tong-in-cheek reference to one of the world's most 
 
 ## Objectives
 1. To develop a front-end application that utilises all CRUD operations using State Management in React.
-2. Connect the front-end with a MySQL database backend hosted on AWS.
+2. Create a serverless Express.js API via the Serverless framework, using AWS Lambda.
+2. Connect the front-end with a MySQL database backend hosted on AWS RDS, via Express API.
 
 ## Wireframes & Prototype Mockup
 1. Initial template
